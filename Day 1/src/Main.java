@@ -25,12 +25,10 @@ public class Main
 		elves.sort(Comparator.comparing(Elf :: getCalories));
 		Collections.reverse(elves);
 
-		//Task 1 completed with this Output
-		System.out.println(elves.get(0));
+		System.out.println("Part 1 solution: " + elves.get(0));
 
-		//Task2
 		int totalCaloriesTopThree = elves.get(0).getCalories() + elves.get(1).getCalories() + elves.get(2).getCalories();
-		System.out.println(totalCaloriesTopThree);
+		System.out.println("Part 2 solution: " + totalCaloriesTopThree);
 	}
 
 	private static void readFile()
@@ -47,7 +45,6 @@ public class Main
 				if (line.isEmpty())
 				{
 					elves.add(addingElf);
-					System.out.println(addingElf);
 					addingElf = new Elf();
 				}
 				else
@@ -60,6 +57,17 @@ public class Main
 		catch (IOException e)
 		{
 			e.printStackTrace();
+		}
+		finally
+		{
+			try
+			{
+				br.close();
+			}
+			catch (IOException e)
+			{
+				throw new RuntimeException(e);
+			}
 		}
 
 	}
