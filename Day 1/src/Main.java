@@ -35,22 +35,22 @@ public class Main
 	{
 		String line;
 		int calories;
-		Elf addingElf;
+		Elf newElf;
 
 		try
 		{
-			addingElf = new Elf();
+			newElf = new Elf();
 			while ((line = br.readLine()) != null)
 			{
 				if (line.isEmpty())
 				{
-					elves.add(addingElf);
-					addingElf = new Elf();
+					elves.add(newElf);
+					newElf = new Elf();
 				}
 				else
 				{
 					calories = Integer.valueOf(line);
-					addingElf.addCalories(calories);
+					newElf.addCalories(calories);
 				}
 			}
 		}
