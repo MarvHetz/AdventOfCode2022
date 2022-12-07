@@ -88,7 +88,6 @@ public class Main
 		{
 			String[] lines = new String[3];
 			String line;
-			int mid;
 			int i = 0;
 			while ((line = br.readLine()) != null)
 			{
