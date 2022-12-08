@@ -13,7 +13,7 @@ public class Main
 		elves = new ArrayList<>();
 		try
 		{
-			br = new BufferedReader(new FileReader(new File("calories.csv")));
+			br = new BufferedReader(new FileReader(new File("Day 1.csv")));
 		}
 		catch (FileNotFoundException e)
 		{
