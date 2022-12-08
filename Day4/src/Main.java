@@ -53,24 +53,19 @@ public class Main
         int assignmentsInt[][] = new int[2][2];
         for (int i = 0; i < 2; i++)
         {
-            for (int j = 0; i < 2; i++)
+            for (int j = 0; j < 2; j++)
             {
                 assignmentsInt[i][j] = Integer.valueOf(assignments[i][j]);
+                System.out.println(assignments[i][j]);
             }
         }
+        System.out.println();
 
-        if (assignmentsInt[0][0] < assignmentsInt[1][0] && assignmentsInt[0][1] > assignmentsInt[1][1])
+        if (assignmentsInt[0][0] >= assignmentsInt[1][0] && assignmentsInt[0][1] <= assignmentsInt[1][1])
         {
-            sumRedundantAssignments++;
+           sumRedundantAssignments++;
         }
-        else if (assignmentsInt[0][0] < assignmentsInt[1][0] && assignmentsInt[0][1] == assignmentsInt[1][1])
-        {
-            sumRedundantAssignments++;
-        }
-        else if (assignmentsInt[0][0] == assignmentsInt[1][0] && assignmentsInt[0][1] > assignmentsInt[1][1])
-        {
-            sumRedundantAssignments++;
-        } else if (assignmentsInt[0][0] == assignmentsInt[1][0] && assignmentsInt[0][1] == assignmentsInt[1][1])
+        else if (assignmentsInt[0][0] <= assignmentsInt[1][0] && assignmentsInt[0][1] >= assignmentsInt[1][1])
         {
             sumRedundantAssignments++;
         }
